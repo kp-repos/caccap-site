@@ -1,0 +1,15 @@
+/* CAC CAP site: page basics and interaction states. Layout lives inline in each page. */
+body{margin:0}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+a:focus-visible{outline:3px solid #fbc946;outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:16px;z-index:10;padding:12px 20px;border-radius:999px;background:#fbc946;color:#233d4d;font:500 15px/1 Inter,sans-serif;text-decoration:none}
+.skip:focus{left:16px}
+.nav:hover{color:#ffffff !important}
+.btn-accent,.btn-ghost,.btn-dark{transition:background-color .2s cubic-bezier(.2,0,0,1),transform .12s cubic-bezier(.2,0,0,1)}
+.btn-accent:hover{background:#fcd46b !important}
+.btn-ghost:hover{background:rgba(255,255,255,.08) !important}
+.btn-dark:hover{background:#1a2e3a !important}
+.btn-accent:active,.btn-ghost:active,.btn-dark:active{transform:scale(.98)}
+.path{transition:box-shadow .2s cubic-bezier(.2,0,0,1)}
+.path:hover{box-shadow:0 2px 34px rgba(18,30,39,.15)}
+.foot a:hover{color:#ffffff !important}

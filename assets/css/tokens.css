@@ -1,0 +1,127 @@
+/* CAC CAP tokens, copied from the CACCAP Design System (version 1792423072). Fonts load from Google Fonts. */
+
+/* CAC CAP — colour tokens.
+   Five brand primaries from the brand guidelines (Jun 2023).
+   Tint/shade steps mirror the PowerPoint theme ramp (lumMod/lumOff 20/40/60/80 lighter, 75/50 darker). */
+:root{
+  /* Deep Ocean — primary ink, headlines, body text, dark grounds */
+  --czc-deep-ocean-50:#c8dbe6;--czc-deep-ocean-100:#92b7cd;--czc-deep-ocean-200:#5b92b4;--czc-deep-ocean-300:#3c6884;
+  --czc-deep-ocean:#233d4d;--czc-deep-ocean-700:#1a2e3a;--czc-deep-ocean-900:#121e27;
+  /* Yellow Sun — section grounds, highlight fills, the background wash */
+  --czc-yellow-sun-50:#fef4da;--czc-yellow-sun-100:#fde9b5;--czc-yellow-sun-200:#fddf90;--czc-yellow-sun-300:#fcd46b;
+  --czc-yellow-sun:#fbc946;--czc-yellow-sun-700:#ecac05;--czc-yellow-sun-900:#9d7303;
+  /* Greenery */
+  --czc-greenery-50:#dfebe7;--czc-greenery-100:#bfd7d0;--czc-greenery-200:#a0c3b8;--czc-greenery-300:#80afa1;
+  --czc-greenery:#619a89;--czc-greenery-700:#497367;--czc-greenery-900:#314d45;
+  /* Light Green */
+  --czc-light-green-50:#ecf2e6;--czc-light-green-100:#d9e6cc;--czc-light-green-200:#c6d9b3;--czc-light-green-300:#b3cd99;
+  --czc-light-green:#a0c080;--czc-light-green-700:#78a050;--czc-light-green-900:#506b35;
+  /* Hot Sun */
+  --czc-hot-sun-50:#ffe5d5;--czc-hot-sun-100:#feccab;--czc-hot-sun-200:#feb281;--czc-hot-sun-300:#fd9957;
+  --czc-hot-sun:#fd7f2d;--czc-hot-sun-700:#dd5902;--czc-hot-sun-900:#943b01;
+  /* Neutrals (PowerPoint theme dk1/lt1/dk2/lt2) */
+  --czc-white:#ffffff;--czc-off-white:#fafafa;--czc-charcoal:#333333;--czc-black:#000000;
+  /* "Light shade of yellow with 85% transparency" — the template's default slide background, flattened over white */
+  --czc-paper:#fffdfa;
+
+  /* ---- Semantic aliases ---- */
+  --bg-page:var(--czc-paper);
+  --bg-surface:var(--czc-white);
+  --bg-subtle:var(--czc-yellow-sun-50);
+  --bg-accent:var(--czc-yellow-sun);
+  --bg-inverse:var(--czc-deep-ocean);
+  --fg-1:var(--czc-deep-ocean);
+  --fg-2:var(--czc-deep-ocean-300);
+  --fg-3:var(--czc-deep-ocean-200);
+  --fg-strong:var(--czc-deep-ocean-900);
+  --fg-on-inverse:var(--czc-white);
+  --fg-on-accent:var(--czc-deep-ocean);
+  --fg-highlight:var(--czc-yellow-sun);
+  --border-1:var(--czc-deep-ocean);
+  --border-2:var(--czc-deep-ocean-50);
+  --border-on-inverse:rgba(255,255,255,.35);
+  --focus-ring:var(--czc-yellow-sun);
+  --action-primary:var(--czc-deep-ocean);
+  --action-primary-hover:var(--czc-deep-ocean-700);
+  --action-primary-press:var(--czc-deep-ocean-900);
+  --action-accent:var(--czc-yellow-sun);
+  --action-accent-hover:var(--czc-yellow-sun-300);
+  /* Status mapping approved: Greenery = positive, Yellow Sun = warning, Hot Sun = alert */
+  --status-positive:var(--czc-greenery);
+  --status-positive-bg:var(--czc-greenery-50);
+  --status-warning:var(--czc-yellow-sun-900);
+  --status-warning-bg:var(--czc-yellow-sun-50);
+  --status-alert:var(--czc-hot-sun-700);
+  --status-alert-bg:var(--czc-hot-sun-50);
+  --status-info:var(--czc-deep-ocean);
+  --status-info-bg:var(--czc-deep-ocean-50);
+  /* Chart series order — from the template doughnut chart */
+  --chart-1:var(--czc-deep-ocean);--chart-2:var(--czc-yellow-sun);--chart-3:var(--czc-greenery);--chart-4:var(--czc-light-green);--chart-5:var(--czc-hot-sun);
+}
+
+/* CAC CAP — typography. Archivo (headlines, Bold) + Inter (body, Light). */
+:root{
+  --font-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --font-body:"Inter","Helvetica Neue",Arial,sans-serif;
+  --font-mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+
+  --weight-light:300;--weight-regular:400;--weight-medium:500;--weight-semibold:600;--weight-bold:700;--weight-extrabold:800;
+
+  /* Screen scale (px) */
+  --text-display:56px;--text-h1:44px;--text-h2:36px;--text-h3:28px;--text-h4:22px;--text-sub:18px;
+  --text-body-lg:18px;--text-body:16px;--text-body-sm:14px;--text-caption:12px;--text-micro:11px;
+
+  /* Slide scale @1920×1080 (template is 960×540pt → ×2) */
+  --slide-title:72px;     /* Archivo Bold 36pt */
+  --slide-sub:36px;       /* Archivo Medium 18pt */
+  --slide-lead:40px;      /* subtitle 20pt */
+  --slide-body:24px;      /* Inter Light 12pt */
+  --slide-caption-l:28px; /* Inter Medium 14pt side caption */
+  --slide-footer:20px;    /* Inter Light 10pt url */
+
+  --leading-tight:.9;     /* titles: 90% line spacing */
+  --leading-snug:1.15;
+  --leading-body:1.5;
+  --tracking-caps:.08em;
+
+  /* Semantic roles */
+  --type-headline:var(--weight-bold) var(--text-h1)/var(--leading-tight) var(--font-display);
+  --type-subhead:var(--weight-medium) var(--text-sub)/var(--leading-snug) var(--font-display);
+  --type-body:var(--weight-light) var(--text-body)/var(--leading-body) var(--font-body);
+  --type-label:var(--weight-medium) var(--text-caption)/1.2 var(--font-body);
+}
+
+/* CAC CAP — spacing, radii, lines, elevation, motion. */
+:root{
+  --space-0:0;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-8:32px;--space-10:40px;--space-12:48px;--space-16:64px;--space-20:80px;--space-24:96px;
+  /* Slide margins: template keeps ~30pt (60px @1920) from every edge */
+  --slide-margin:60px;--slide-gutter:80px;
+  --container-max:1200px;
+
+  /* Radii — the brand is circles + square rectangles; nothing in between */
+  --radius-none:0;--radius-sm:2px;--radius-pill:999px;--radius-circle:50%;
+
+  /* Lines — template connectors are 0.75pt Deep Ocean hairlines */
+  --line-hair:1px;--line-strong:2px;--line-ring:3px;
+
+  /* Elevation — template uses one soft, large-blur shadow (17pt blur, 15% alpha) */
+  --shadow-none:none;
+  --shadow-soft:0 2px 34px rgba(18,30,39,.15);
+  --shadow-lift:0 3px 34px rgba(0,0,0,.15);
+  --shadow-focus:0 0 0 3px var(--czc-yellow-sun);
+
+  /* Motion — calm, no bounce */
+  --ease-standard:cubic-bezier(.2,0,0,1); /* @kind other */
+  --ease-exit:cubic-bezier(.4,0,1,1); /* @kind other */
+  --dur-fast:120ms; /* @kind other */
+  --dur-base:200ms; /* @kind other */
+  --dur-slow:400ms; /* @kind other */
+}
+
+/* CAC CAP — minimal element defaults. */
+html{color:var(--fg-1);background:var(--bg-page);font-family:var(--font-body);font-weight:var(--weight-light);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--weight-bold);line-height:var(--leading-tight);color:var(--fg-1);text-wrap:balance}
+p{text-wrap:pretty}
+a{color:var(--czc-deep-ocean);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--czc-greenery-700)}
+::selection{background:var(--czc-yellow-sun);color:var(--czc-deep-ocean)}
