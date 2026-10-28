@@ -14,10 +14,10 @@ a:focus-visible{outline:3px solid #fbc946;outline-offset:3px}
 .path:hover{box-shadow:0 2px 34px rgba(18,30,39,.15)}
 .foot a:hover{color:#ffffff !important}
 /* Teaser doors (2026-10-28) */
-.door{position:relative;transition:box-shadow .2s cubic-bezier(.2,0,0,1)}
-.door:hover{z-index:1;box-shadow:0 2px 34px rgba(18,30,39,.25)}
-.door:hover .go svg{transform:translateX(4px)}
+.go{text-underline-offset:5px;text-decoration-thickness:1px}
+.go:hover{text-decoration:underline !important}
 .go svg{transition:transform .2s cubic-bezier(.2,0,0,1)}
-.door:active{transform:scale(.99)}
+.go:hover svg{transform:translateX(4px)}
+.go:active{transform:scale(.98)}
 /* Logo files tinted to the brand colour of their ground: exact artwork, colour from the background */
 .tint{-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;-webkit-mask-size:contain;mask-size:contain}
