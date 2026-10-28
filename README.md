@@ -1,17 +1,16 @@
 # caccap.com
 
-The CAC CAP website: a splash page and one page per audience, as plain static files.
+The CAC CAP teaser site: one page, plain static files.
 
-| Path | Page |
+| Path | What |
 |---|---|
-| `index.html` | Splash: the hero line and the three ways in |
-| `companies/` | For companies (the client value proposition) |
-| `operators/` | For contact-center and BPO owners (sell to us, or run on our platform) |
-| `investors/` | For investors (the thesis in words; the summary on request) |
-| `assets/css/tokens.css` | Colours, type, spacing, copied from the CACCAP Design System |
+| `index.html` | The teaser: hero line, the yellow sun, three doors (companies · BPOs · investors), each a mailto with its own subject |
 | `assets/css/site.css` | Page basics and hover, focus and press states |
-| `assets/img/` | The outlined CAC CAP lockup and the mark (favicon) |
+| `assets/css/tokens.css` | Colours, type, spacing from the CACCAP Design System (used by the archived pages) |
+| `assets/img/` | The outlined CAC CAP lockup and mark (exact logo files; the page tints them to each ground with a CSS mask) |
+| `CNAME` | `www.caccap.com` |
+| branch `archive/site-v3` | The previous four-page site (splash · companies · operators · investors), kept as it stood on 2026-10-28; Pages publishes `main` only |
 
-Layout and copy live inline in each page. Fonts (Archivo, Inter) load from Google Fonts.
+Layout and copy live inline in `index.html`. Fonts (Archivo, Inter) load from Google Fonts.
 
-Source design: the "CAC CAP Website v3" Design artifact. Hosting: GitHub Pages, once the repository is public and the domain is pointed.
+Source design: the "CAC CAP Teaser Site" Design artifact, hero S1 (plain sun) + the shared doors.
