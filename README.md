@@ -1,6 +1,6 @@
 # caccap.com
 
-The CAC CAP teaser site: one page, plain static files.
+The CAC CAP teaser site: one page, plain static files. Live at https://www.caccap.com (GitHub Pages, branch `main`, root).
 
 | Path | What |
 |---|---|
